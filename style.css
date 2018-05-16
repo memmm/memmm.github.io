@@ -26,15 +26,15 @@ body {
   margin: 0;
   height: 100%;
   background: var(--bg-color);
-  color: #333333;
+  color: var(--base-color);
   font-family: monospace;
   font-size: 1.2rem;
 }
 
 .container {
 
-  grid-template-columns: 20rem auto;
-  grid-template-rows: 15rem repeat(5, auto);
+  grid-template-columns: 18rem auto;
+  grid-template-rows: 14rem repeat(5, auto);
   justify-items: stretch;
   align-items: stretch;
 }
@@ -51,6 +51,8 @@ body {
   }
 }
 
+
+
 .title {
   grid-column: 1 / span 2;
   grid-row: 1;
@@ -64,16 +66,43 @@ body {
 }
 
 .hi {
-  font-size: 15rem;
+  font-size: 14rem;
   font-weight: 900;
   color: var(--first-color);
-  text-shadow: -15px 15px 0px rgba(199,199,37,1);
+  margin-left: 0.8rem;
+  text-shadow: -13px 13px 0px rgba(199,199,37,1);
 
 }
 
 #softeng {
-  font-size: 3rem;
+  font-size: 2rem;
+  white-space: pre;
   text-shadow: -3px 3px 0px rgba(85,36,150,1);
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1rem;
+    text-align: center;
+  }
+  .hi {
+    visibility: collapse;
+  }
+  #softeng {
+    visibility: collapse;
+  }
+  .section-content > div {
+    width: 90%;
+  }
+  .date {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1560px) {
+
 }
 
 .side {
@@ -110,6 +139,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-flow: row nowrap;
 }
 
 .section-content::before {
@@ -126,12 +156,30 @@ body {
   color: var(--third-color);
 }
 
-#about {
-  /* grid-area: 2 / 2 / 2 / 2; */
+.section-content > div {
+  width: 70%;
 
 }
 
-#skills {
+#about > .section-content > p {
+  width: 60%;
+}
+
+#skills > .section-content > div > i {
+  margin: 1rem;
+}
+
+.line-break {
+  width: 100%;
+}
+
+#skills > .section-content > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin-top: 1rem;
+  font-size: 2rem;
 
 }
 
@@ -147,12 +195,30 @@ body {
 
 }
 
+.sc-w-list > tr {
+  padding: 1rem;
+
+}
+
+.date {
+  width: 110px;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+.rh {
+  font-weight: bold;
+}
+
+.rh, .rd {
+  margin: 0.2rem;
+}
+
 .menu {
   list-style-type: none;
   width: 100%;
   padding: 0;
-  margin-bottom: 40vh;
-  margin-top: 10rem;
+  margin-bottom: calc(50vh - 10rem);
 }
 
 .menu > li {
@@ -184,5 +250,20 @@ body {
 
 
 .links {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
 
+  margin-bottom: 1rem;
+}
+
+.fab {
+  color: var(--first-color);
+  font-size: 2rem;
+  box-shadow: 0px 2px 0px rgba(199,199,37,1);
+  transition: box-shadow 0.5s;
+}
+
+.fab:hover {
+  box-shadow: -6px 6px 0px rgba(199,199,37,1);
 }
