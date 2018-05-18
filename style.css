@@ -61,8 +61,10 @@ body {
   color: var(--second-color);
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  line-height: 3rem;
+  /* line-height: 3rem; */
   text-shadow: -10px 10px 0px rgba(85,36,150,1);
+  display: flex;
+  align-items: baseline;
 }
 
 .hi {
@@ -74,10 +76,35 @@ body {
 
 }
 
-#softeng {
+.position {
   font-size: 2rem;
   white-space: pre;
   text-shadow: -3px 3px 0px rgba(85,36,150,1);
+  animation: changepos 2s ease-in-out infinite;
+}
+
+#softeng {
+}
+
+#webdev {
+  animation-delay: 1s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, -2.7rem);
+}
+
+.pos-cont {
+  height: 2.3rem;
+  position: relative;
+  overflow: hidden;
+  padding-left: 0.2rem;
+}
+
+@keyframes changepos {
+  from {transform: translate(0, -2.7rem);}
+  50% {transform: translate(0, -0.2rem);}
+  to {transform: translate(0, 2.7rem);}
 }
 
 @media (max-width: 800px) {
@@ -90,7 +117,7 @@ body {
   .hi {
     visibility: collapse;
   }
-  #softeng {
+  .position {
     visibility: collapse;
   }
   .section-content > div {
@@ -101,9 +128,7 @@ body {
   }
 }
 
-@media (max-width: 1560px) {
 
-}
 
 .side {
   grid-column: 1;
@@ -248,13 +273,26 @@ body {
   width: 100%;
 }
 
+.cv {
+  margin-bottom: 2rem;
+}
+
+.cv:hover {
+  border-bottom: 2px solid var(--second-color);
+  margin-bottom: calc(2rem - 2px);
+}
+
+.cv > a {
+  text-decoration: none;
+  color: var(--first-color);
+}
 
 .links {
   width: 70%;
   display: flex;
   justify-content: space-evenly;
 
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .fab {
