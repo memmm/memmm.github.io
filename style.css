@@ -65,6 +65,7 @@ body {
   text-shadow: -10px 10px 0px rgba(85,36,150,1);
   display: flex;
   align-items: baseline;
+  white-space: nowrap;
 }
 
 .hi {
@@ -243,7 +244,7 @@ body {
   list-style-type: none;
   width: 100%;
   padding: 0;
-  margin-bottom: calc(50vh - 10rem);
+  margin-bottom: calc(50vh - 19rem);
 }
 
 .menu > li {
