@@ -189,7 +189,12 @@ body {
 }
 
 #about > .section-content > p {
-  width: 60%;
+  width: 70%;
+  font-size: 1.3rem;
+}
+
+#social {
+  background: var(--second-color);
 }
 
 #skills > .section-content > div > i {
@@ -203,7 +208,7 @@ body {
 #skills > .section-content > div {
 
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
 
 }
 
@@ -221,7 +226,7 @@ body {
 
 .port-item {
   background: var(--base-color);
-  height: 10rem;
+  height: 13rem;
   width: 15rem;
   max-width: 80vw;
   margin: 10px;
@@ -233,6 +238,19 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 0;
   order: 1; */
+}
+
+.port-item > img {
+  object-fit: cover;
+  height: 10rem;
+  width: 90%;
+  margin: 0.7rem 0.7rem 0.3rem 0.7rem;
+}
+
+.port-item > p {
+  color: var(--first-color);
+  margin: auto;
+  text-align: center;
 }
 
 .extend-port-item {
@@ -259,16 +277,21 @@ body {
   margin: 0 1rem 0 1rem;
 }
 
-.port-text > h3 {
+h3 {
   color: var(--second-color);
 }
 
-#work {
-
+.other-projs {
+  background-color: var(--base-color);
+  color: var(--first-color);
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
-#edu {
-
+.other-projs > ul > li {
+  margin: 1rem;
 }
 
 .sc-w-list > tr {
@@ -325,12 +348,12 @@ body {
 }
 
 .cv {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .cv:hover {
   border-bottom: 2px solid var(--second-color);
-  margin-bottom: calc(2rem - 2px);
+  margin-bottom: calc(1rem - 2px);
 }
 
 .cv > a {
@@ -339,10 +362,10 @@ body {
 }
 
 .links {
-  width: 70%;
+  width: 90%;
   display: flex;
   justify-content: space-evenly;
-
+  padding: 2rem;
   margin-bottom: 2rem;
 }
 

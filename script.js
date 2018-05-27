@@ -32,5 +32,11 @@ $(document).ready(function(){
 
   });
 
+  $('#social').hover( function() {
+    $('.links').css({"background": "#bec625"});
+  });
+  $('#social').mouseout( function() {
+    $('.links').css({"background": "transparent"});
+  });
 
 });
